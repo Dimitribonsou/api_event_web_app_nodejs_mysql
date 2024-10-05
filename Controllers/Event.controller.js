@@ -14,6 +14,10 @@ const addEvent = (req, res) => {
     {
       Image=req.file.filename;
     }
+    else if(!!req.body.Image)
+    {
+      Image=req.body.Image
+    }
     // //ecriture de la requete d'insertion d'un evenement
     const reqnewEvent =
       "INSERT INTO `event`( `nom_evenement`, `nom_auteur`, `lien_evenement`, `adresse`, `date_debut`, `date_fin`, `heure_debut`, `heure_fin`,`image`, `description`) VALUES (?,?,?,?,?,?,?,?,?,?)";

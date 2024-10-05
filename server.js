@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 // importer la route Event pour acceder au route de gestion des evenements
 const EventRoute = require("./routes/Event.route");
 //ajouter la route event a notre application express
-app.use("/api/datnek", EventRoute);
+app.use(EventRoute);
 
 //demarer l'application express en definissant un port comme parametre a la methode listen de express
 const port = process.env.PORT | 5000;
